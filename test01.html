@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輪播</title>
+    <style>
+        .carousel{
+            width: 800px;
+            height: 400px;
+            position: relative;
+        }
+        .list{
+            position: relative;
+            width: 800px;
+            height: 400px;
+            list-style: none;
+            padding-left: 0px;
+        }
+        .item{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+            opacity: 0;
+            transition: all .5s;
+        }
+        .item:nth-child(1){
+            background-color: blue;
+        }
+        .item:nth-child(2){
+            background-color: red;
+        }
+        .item:nth-child(3){
+            background-color: yellow;
+        }
+        .item:nth-child(4){
+            background-color: green;
+        }
+        .btn{
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            top:150px;
+            z-index: 100;
+        }
+        #goPre{
+            left: 0px;
+        }
+        #goNext{
+            right: 0px;
+        }
+        .item.active{
+            opacity: 1;
+            z-index: 10;
+        }
+        .pointList{
+            padding-left: 0px;
+            list-style: none;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
+        .point{
+            width: 12px;
+            height: 12px;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 100%;
+            float: left;
+            margin-right: 16px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
+        .point.active{
+            background-color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <ul class="list">
+            <li class="item active">0</li>
+            <li class="item">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index="0"></li>
+            <li class="point" data-index="1"></li>
+            <li class="point" data-index="2"></li>
+            <li class="point" data-index="3"></li>
+        </ul>
+        <button type="button" class="btn" id="goPre"><</button>
+        <button type="button" class="btn" id="goNext">></button>
+    </div>
+    <script>
+        var items = document.getElementsByClassName('item');    //  圖片
+        var points = document.getElementsByClassName('point');  // 點
+        var goPreBtn = document.getElementById('goPre');
+        var goNextBtn = document.getElementById('goNext');
+        var index = 0; //表示第幾張圖片在展示
+
+        var clearActive = function(){
+             for(var i=0; i<items.length; i++){
+                items[i].className ='item';
+            }    
+            for(var i=0; i<points.length; i++){
+                points[i].className ='point';
+            }            
+        }
+
+        var goIndex = function(){
+            clearActive();
+            points[index].className ='point active';
+            items[index].className = 'item active';
+        }
+
+        var goNext = function(){
+            if( index < 3 ){
+                index++ ;               
+            }else{
+                index = 0;
+            }
+            goIndex();
+        }
+
+        goNextBtn.addEventListener('click',function(){
+            goNext();
+        })
+
+        var goPre = function(){
+            if(index == 0){
+                index=3;
+            }else{
+                index--;
+            }
+            goIndex();
+        }
+
+        goPreBtn.addEventListener('click',function(){
+            goPre();
+        })
+
+        for(var i=0;i<points.length;i++){
+            points[i].addEventListener('click',function(){
+                var pointIndex = this.getAttribute('data-index');
+                // console.log(pointIndex);
+                index = pointIndex;
+                goIndex();
+            })
+        }
+
+
+    </script>
+</body>
+</html>

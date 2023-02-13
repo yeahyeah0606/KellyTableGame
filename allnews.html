@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>相關新聞</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/font.css"> -->
+    <link rel="stylesheet" href="./css/kelly.css">
+    <link rel="icon" href="./images/icon.png" type="image/gif" sizes="16x16">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row>.column {
+            padding: 0 30px 20px 0;
+
+        }
+
+        .column {
+            float: left;
+            width: 33%;
+        }
+
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .container {
+            width: 100%;
+            /* outline: dashed 1px black; */
+        }
+
+        .produce {
+            width: 70%;
+            /* height: 50px; */
+            /* background-color: wheat; */
+            /* Center horizontally*/
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 48px;
+        }
+        body{
+            background-color: #D3FF93;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導航 -->
+    <div class="nav">
+        <div class="wrap">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/icon.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li class="nav-text"><a href="./partyGame.html">派對精選</a></li>
+                    <li class="nav-text"><a href="./preventGame.html">防疫專區</a></li>
+                    <li class="nav-text"><a href="./teachGame.html">寓教於樂</a></li>
+                    <li class="nav-text"><a href="./newYearGame.html">春節過年精選</a></li>
+                    <li class="nav-text"><a href="./allnews.html">相關新聞</a></li>
+                </ul>
+            </div>
+            <div class="time-bar">
+                <p id="today">今日:</p>
+                <p id="time-hms" class="text">00:00:00</p>
+                <p id="time-ymd" class="text">00-00-00</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="produce">
+            <br><br>
+            <h1 style="text-align:center">相關新聞</h1>
+            <br><br><br>
+            <div class="row">
+                <div class="column">
+                    <a href="./news01.html"><img src="./images/allnews/allnews01.png" style="width:100%" class="hover-shadow cursor"></a>
+                    
+                </div>
+                <div class="column">
+                    <a href="./news02.html"><img src="./images/allnews/allnews02.png" style="width:100%" class="hover-shadow cursor"></a>
+                    
+                </div>
+                <div class="column">
+                    <a href="./news03.html"><img src="./images/allnews/allnews03.png" style="width:100%" class="hover-shadow cursor"></a>
+                    
+                </div>
+            </div>
+    <script type="text/javascript" src="./js/time.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+/* 最上方黑色樣式 */
+body{
+    background-color: #D3FF93;
+    /* width: 1280px; */
+    width: 100%;
+    position: absolute;
+} 
+
+.wrap{
+    width: 1226px;
+    margin: 0 auto;
+       
+}
+
+.cart{
+    position: relative;
+    margin-left: 25px;
+    width: 150px;
+    height: 40px;
+
+}
+
+
+/* 導航樣式開始 */
+.nav{
+    width: 100%;
+    height: 100px;
+    /* background-color: #fff; */
+    /* background-color: wheat; */
+    background-color: #333;
+    /* position: absolute; */
+}
+
+.logo{
+    width: 62px;
+    height: 56px;
+    background-color: 	#333;
+    float: left;
+    margin-top: 22px;
+    text-align: left;
+    position: relative;
+    left: 100px;
+    /* position: absolute;
+    left: 450px; */
+}
+
+.nav-bar{
+    width: 868px;
+    height: 90px;
+    background-color: #333;
+    float: left;
+    padding-left: 300px;
+    box-sizing: border-box;
+}
+
+.logo img{
+    width: 56px;
+}
+.logo img:hover{
+    transform: translateX(3px);
+}
+.nav-bar>ul>li{
+    float: left;
+    padding: 38px 10px;
+    margin: 0;
+}
+.nav-bar>ul>li>a{
+    color: white;
+}
+.nav-bar>ul>li>a:hover{
+    color: #ff6700;
+}
+.nav-text{
+    font-size: 20px;
+}
+/* banner */
+.banner{
+    margin: 0;
+    width: 100%;
+    height: 460px;
+    background-color: 	#D3FF93;
+}
+.banner-box{
+    width: 1226px;
+    height: 460px;
+    background-color: 	#D3FF93;
+} 
+
+/* recommen */
+.recommend{
+    width: 531px;
+    height: 450px;
+    /* background-color: brown; */
+    float: left;
+}
+.recom01{
+    width: 260px;
+    height: 450px;
+    background-color: white;
+    float: left;
+    margin-left: 5px;
+}
+.recom01:hover{
+    background-color: white;
+    opacity: 0.9;
+}
+.recom02{
+    width: 260px;
+    height: 450px;
+    background-color: white;
+    float: left;
+    margin-left: 5px;
+}
+.recom02:hover{
+    background-color: white;
+    opacity: 0.9;
+}
+.recom02 p{
+    text-align: left;
+    padding-left: 15px;
+}
+.recom02 p{
+    text-align: left;
+    padding-right: 15px;
+}
+
+.recom01 .more,.recom02 .more{
+    text-align: right;
+    padding-left: 30px;    
+}
+
+/* .rank{
+    width: 100%;
+    height: 170px;
+    margin: 14px 0 26px;
+    background-color: 	#D3FF93; 
+    background-color: 	red;
+    position: absolute;
+    left: 520px;
+    top: 600px; 
+    font-size: 24px;
+    position: relative;
+    left: 0px;
+    top: 50px;
+} */
+
+.rank .table-stroke thead th {
+    position: relative;
+    top: ˇ0px;
+    border-top: 2px solid lightgray;
+
+  }
+
+.rank #MustHaveID {
+    border-bottom: 2px solid rgb(192, 192, 192);
+    position: relative;
+    left: 150px;
+    top: 40px;
+    font-size: 24px;
+  }
+.ad-box{
+    width: 280px;
+    height: 170px;
+    background-color: gold;
+    float: left;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.ad-box img{
+    width: 100%;
+    box-shadow: 10px 15px 30px rgba(0,0,0,.2);
+}
+.ad-box:hover{
+    background-color: black;
+    opacity: 0.8;
+}
+
+/* 商品 */
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: 	#D3FF93;
+}
+
+/* 今日時間  今日日期 */
+.time-bar{
+    width: 250px;
+    height: 100px;
+    background-color: #5CADAD;
+    float: left;
+    font-family: "Gill Sans", "Gill Sans MT",Calibri;
+}
+#time-hms{
+    color: white;
+    font-size: 42px;
+}
+#time-ymd{
+    color: white;
+    font-size: 18px;
+}
+#today{
+    font-size: 16px;
+    color: white;
+}
+caption{
+    font-size: 32px;
+}
